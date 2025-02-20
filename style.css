@@ -223,7 +223,7 @@ p {
 
 #about {
     position: relative;
-    background: url('assent/img/Yarden\ Ben\ Hamo\ -\ Keidar\ PRINT-8.jpg') no-repeat center center/cover;
+    background: url('assent/images/Yarden\ Ben\ Hamo\ -\ Keidar\ PRINT-8.jpg') no-repeat center center/cover;
     background-attachment: fixed; /* יוצר את אפקט הפרלקס */
     min-height: 120vh;
     min-width: 100%;
@@ -255,7 +255,7 @@ p {
 }
 #services {
     position: relative;
-    background: url('assent/img/Yarden\ Ben\ Hamo\ -\ Keidar\ PRINT-29.jpg') no-repeat center center/cover;
+    background: url('assent/images/WhatsApp\ Image\ 2025-02-19\ at\ 21.26.29.jpeg') no-repeat center center/cover;
     background-attachment: fixed; /* יוצר את אפקט הפרלקס */
     min-height: 80vh;
     display: flex;
@@ -314,7 +314,7 @@ p {
 
 #hero {
     position: relative;
-    background: url('assent/img/Yarden\ Ben\ Hamo\ -\ Keidar-25.jpg') center/cover fixed no-repeat;
+    background: url('assent/images/Yarden\ Ben\ Hamo\ -\ Keidar-25.jpg') center/cover fixed no-repeat;
     color: white;
     padding: 150px 20px;
     text-align: center;
