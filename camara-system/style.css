@@ -1,0 +1,510 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Teko:wght@400;700&display=swap');
+html,body{
+    background-color: #000000;
+}
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Titillium Web', sans-serif;
+    text-align: center;
+}
+
+header {
+    background-color: #000000;
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    border-bottom: 2px solid #ff0000;
+}
+
+.nav {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav .nav-link {
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav .nav-link:hover {
+    color: #2e2e2e;
+}
+
+#hero {
+    padding: 100px 20px;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.btn-danger {
+    background-color: #000000;
+    border: none;
+    font-weight: bold;
+}
+
+.btn-danger:hover {
+    background-color: #000000;
+}
+
+.sector-container {
+    display: flex;
+    width: 100%;
+    height: 350px; /* גובה מוגדר קבוע */
+    overflow: hidden;
+}
+
+.category-item {
+    flex: 1;
+    position: relative;
+    transition: flex 0.4s ease-in-out;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+}
+
+.category-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* מתקן את הבעיה של הרקע השחור */
+}
+
+.category-item p {
+    position: absolute;
+    bottom: 50px; /* מזיז את הטקסט גבוה יותר */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    color: white;
+    padding: 10px;
+    font-size: 28px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.category-item button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #000000;
+    color: black;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+/* כשהעכבר על האלמנט, הכפתור זז קצת למטה שלא יפריע לטקסט */
+.category-item:hover button {
+    bottom: 40px;
+}
+
+/* הוספת כפתור פרטים נוספים */
+.category-item .details-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #000000;
+    color: rgb(255, 255, 255);
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity 0.3s ease-in-out, bottom 0.3s ease-in-out;
+    opacity: 0; /* הכפתור מוסתר כברירת מחדל */
+}
+
+.category-item:hover .details-btn {
+    opacity: 1;
+    bottom: 40px; /* זז קצת למעלה כדי לא להתנגש עם הכותרת */
+}
+
+
+
+#contact {
+    background: #1a1a1a;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #222;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #555;
+    background: #6e6e6e;
+    color: white;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #303030;
+    outline: none;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background: #727272;
+    color: rgb(255, 255, 255);
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.contact-form button:hover {
+    background: #000000;
+}
+
+p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+
+#about-title {
+    font-family: 'Teko', sans-serif;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    color: #ffffff; /* צבע זהב */
+    position: relative;
+    z-index: 2;
+}
+
+#about-text {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    position: relative;
+    z-index: 2;
+}
+
+/* הדגשת מילים חשובות */
+.highlight {
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #FFD700;
+    text-shadow: 2px 2px 5px rgba(255, 215, 0, 0.5);
+}
+
+
+#about {
+    position: relative;
+    background: url('assent/img/Yarden\ Ben\ Hamo\ -\ Keidar\ PRINT-8.jpg') no-repeat center center/cover;
+    background-attachment: fixed; /* יוצר את אפקט הפרלקס */
+    min-height: 120vh;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5rem 0;
+    z-index: 0;
+}
+
+
+#about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* שכבת צבע מעומעמת */
+    z-index: 0; /* שומר שהשכבה תהיה מאחורי הטקסט */
+}
+
+#about-title, #about-text {
+    position: relative;
+    z-index: 1; /* מבטיח שהתוכן יהיה מעל שכבת הרקע */
+    max-width: 80%;
+}
+#services {
+    position: relative;
+    background: url('assent/img/Yarden\ Ben\ Hamo\ -\ Keidar\ PRINT-29.jpg') no-repeat center center/cover;
+    background-attachment: fixed; /* יוצר את אפקט הפרלקס */
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7);
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.6); /* שכבת צבע מעומעמת */
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+.highlight {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #343434; /* צבע זהב להבלטה */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.2s ease-in-out, transform 1s ease-in-out;
+}
+
+/* אפקט כשמגיעים לסקשן */
+#services.show .highlight {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+#services-title {
+    font-family: 'Teko', sans-serif;
+    font-size: 3rem; /* כותרת גדולה ובולטת */
+    letter-spacing: 2px;
+    color: #ffffff; /* צבע זהב */
+}
+
+#services-text {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: white;
+}
+
+/* הדגשת המשפט עם פונט מיוחד */
+.highlight {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #ffffff; /* זהב */
+    text-shadow: 2px 2px 5px rgba(54, 55, 55, 0.5);
+}
+
+
+#hero {
+    position: relative;
+    background: url('assent/img/Yarden\ Ben\ Hamo\ -\ Keidar-25.jpg') center/cover fixed no-repeat;
+    color: white;
+    padding: 150px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* מבטיח שהתמונה תכסה את כל גובה המסך */
+}
+
+/* רקע כהה מאחורי התוכן */
+#hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* רקע כהה */
+    z-index: 1;
+}
+
+/* מוודא שהתוכן יופיע מעל הרקע */
+#hero > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* לוגו פראלקס */
+.parallax-logo {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* אנימציה ללוגו */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* עיצוב הכותרת */
+#hero-title {
+    font-family: 'Teko', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 10px rgba(52, 52, 51, 0.8);
+}
+
+/* עיצוב תיאור */
+#hero-description {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+/* כפתור צור קשר */
+#contact-btn {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 12px 25px;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+#contact-btn:hover {
+    background: #b0a0a0;
+    color: rgb(255, 255, 255);
+    transform: scale(1.1);
+}
+#contact-container {
+    display: flex;
+    justify-content: space-between; /* מרווח בין המפה ליצירת קשר */
+    align-items: flex-start; /* מסדר את האלמנטים למעלה */
+    width: 100%;
+    max-width: 1200px; /* מונע פריסה רחבה מדי */
+    margin: auto; /* ממרכז את כל הקונטיינר */
+    padding: 20px;
+}
+
+#map {
+    width: 300px; /* קובע רוחב קבוע */
+    height: 250px; /* מקטין מעט את הגובה */
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+.category-item {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 🔹 כפתור פרטים נוספים */
+.details-btn {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.details-btn:hover {
+    background-color: #0056b3;
+}
+
+/* 🔹 סקשן הפופ-אפ */
+#sector-details {
+    display: none; /* מוסתר כברירת מחדל */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* שולט על הרוחב */
+    max-width: 800px; /* מגביל את הרוחב המקסימלי */
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+#sector-details.show {
+    display: block; /* מציג את הפופ-אפ כשהוא צריך להופיע */
+}
+
+/* תוכן הפופ-אפ */
+.details-content {
+    text-align: center;
+    max-width: 100%;
+}
+
+/* תמונה */
+#sector-image {
+    width: 100%; /* מתאים את הרוחב לרוחב הקופסה */
+    max-height: 400px; /* מגביל את הגובה */
+    object-fit: cover; /* חיתוך החלקים המיותרים ושמירה על היחס */
+    border-radius: 10px;
+}
+
+/* טקסט */
+.details-text {
+    margin-top: 15px;
+}
+
+/* כפתור סגירה */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    background: red;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.close-btn:hover {
+    background: darkred;
+    transform: scale(1.1);
+}
+
+/* 🔹 אנימציה */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.footer {
+    text-align: center;
+    padding: 15px;
+    background: #222;
+    color: white;
+    font-size: 14px;
+}
+@media (max-width: 768px) {
+    .footer {
+        padding: 20px;
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מצלמות אבטחה חכמות</title>
+    <meta name="description"
+        content="מצלמות אבטחה מתקדמות עם AI, זיהוי פנים, בקרת כניסה והתראות בזמן אמת למגזרים פרטיים, עסקיים ותאגידיים.">
+    <meta name="keywords"
+        content="מצלמות אבטחה, זיהוי פנים, AI, בקרת כניסה, מערכות אבטחה חכמות, אבטחת עסקים, אבטחת בית">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body class="bg-dark text-light">
+    <header class="container-fluid py-3 d-flex flex-column align-items-center text-center border-bottom border-light">
+        <div class="logo mb-2"> <img src="assent/img/צילום מסך 2025-02-18 233854.png" alt="לוגו החברה"
+                class="img-fluid"> </div>
+        <nav>
+            <ul class="nav justify-content-center">
+                <li class="nav-item"><a id="nav-about" class="nav-link text-light" href="#about">עלינו</a></li>
+                <li class="nav-item"><a id="nav-services" class="nav-link text-light" href="#services">שירותים</a></li>
+                <li class="nav-item"><a id="nav-sectors" class="nav-link text-light" href="#sectors-title">מגזרים</a>
+                </li>
+                <li class="nav-item"><a id="nav-contact" class="nav-link text-light" href="#contact">יצירת קשר</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section id="about" class="container text-center py-5">
+        <h2 id="about-title">?מי אנחנו</h2>
+        <p id="about-text">חברתנו ניצבת בחזית תחום מצלמות האבטחה והבקרה, תוך שימוש בטכנולוגיות בינה
+            מלאכותית</strong><br>
+            מהמתקדמות ביותר לזיהוי פנים, קול וניטור מתקדם. אנו מציעים פתרונות אבטחה חכמים ומדויקים,
+            המספקים שליטה מלאה והתראה בזמן אמת לכל מגזר – החל ממגזר פרטי ועסקי,
+            דרך מגזרים ביטחוניים ועד תאגידים גדולים עם שילוב של חדשנות, מקצועיות ומערכות אבטחה מתקדמות,
+            אנו מבטיחים רמת בטיחות גבוהה ושקט נפשי לכל לקוחותינו</p>
+    </section>
+
+    <section id="services" class="container-fluid text-center py-5">
+        <div class="overlay">
+            <h2 id="services-title">?מה אנחנו מספקים</h2>
+            <p id="services-text">
+                אנו מספקים פתרונות אבטחה חכמים המשלבים טכנולוגיות מתקדמות
+                ומעניקים שליטה מלאה וביטחון מירבי עם זיהוי פנים וקול ניטור חכם והתראות בזמן אמת
+                – המערכות שלנו לא רק שומרות אלא גם מקדימות תרופה למכה
+                <br><br>
+                <span class="highlight">חדשנות אמינות ודיוק ללא פשרות הם היסודות שמנחים אותנו</span><br>
+                כי כשמדובר בביטחון – מגיע לך הטוב ביותר
+            </p>
+        </div>
+    </section>
+
+    <section id="sectors-title">
+        <div class="sector-container">
+            <div class="category-item">
+                <img src="assent/img/WhatsApp Image 2025-02-19 at 21.26.29.jpeg" alt="מגזר פרטי">
+                <p>מגזר פרטי</p>
+                <button class="details-btn" data-sector="private">פרטים נוספים</button>
+            </div>
+            <div class="category-item">
+                <img src="assent/img/WhatsApp Image 2025-02-19 at 21.16.36.jpeg" alt="מגזר עסקי">
+                <p>מגזר עסקי</p>
+                <button class="details-btn" data-sector="business">פרטים נוספים</button>
+            </div>
+            <div class="category-item">
+                <img src="assent/img/DALL·E 2025-02-19 02.04.06 - A realistic farmland scene with security cameras monitoring the area. A small ATV is trespassing on the private field, and the cameras are actively de.webp" alt="מגזר ביטחוני">
+                <p>מגזר ביטחוני</p>
+                <button class="details-btn" data-sector="security">פרטים נוספים</button>
+            </div>
+            <div class="category-item">
+                <img src="assent/img/WhatsApp Image 2025-02-19 at 21.16.32.jpeg" alt="מגזר תאגידי">
+                <p>מגזר תאגידי</p>
+                <button class="details-btn" data-sector="corporate">פרטים נוספים</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 🔽 סקשן שייפתח מתחת עם מידע לכל מגזר 🔽 -->
+    <section id="sector-details">
+        <div class="details-content">
+            <span id="close-btn" class="close-btn">✖</span>
+            <img id="sector-image" src="" alt="תמונה למגזר">
+            <div class="details-text">
+                <h3 id="sector-title">כותרת המגזר</h3>
+                <p id="sector-description">תיאור המגזר יוצג כאן...</p>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section id="contact" class="container text-center py-5">
+        <h2>צור קשר</h2>
+        <p>לשאלות, ייעוץ, והתאמה אישית, שלח הודעה ונחזור אליך בהקדם</p>
+        <form id="contactForm" action="https://formspree.io/f/xvgzddln" method="POST" class="contact-form">
+            <input type="text" name="name" class="form-control" placeholder="שם מלא" required>
+            <input type="email" name="email" class="form-control" placeholder="אימייל" required>
+            <textarea name="message" class="form-control" placeholder="הודעה" required></textarea>
+            <button type="submit">שלח הודעה</button>
+        </form>
+    </section>
+    
+
+    
+<!-- הוספת סגנון למפה -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<!-- יצירת אלמנט למפה -->
+<div id="map-container">
+    <div id="map"></div>
+</div>
+<footer class="footer">
+    <p>2025 © Netanel Project -כל הזכויות שמורות ל</p>
+</footer>
+<!-- טעינת ספריית Leaflet -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="map.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
